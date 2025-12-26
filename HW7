@@ -1,0 +1,12 @@
+void insert(int arr[], int *n, int pos, int val) {
+    for(int i = *n; i > pos; i--)
+        arr[i] = arr[i-1];
+    arr[pos] = val;
+    (*n)++;
+}
+
+void delete(int arr[], int *n, int pos) {
+    for(int i = pos; i < *n-1; i++)
+        arr[i] = arr[i+1];
+    (*n)--;
+}
